@@ -9,11 +9,13 @@ body {
   background: #f4f6fb;
   margin: 0;
   padding: 24px;
+  background: #1C1F20;
 }
 .card {
+  color: white;
   width: 100%;
   max-width: 760px;
-  background: white;
+  background: #181A1B;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(20,30,60,0.08);
   padding: 20px;
