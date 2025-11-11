@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Image Uploader — HTML / CSS / JS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Image uploader — HTML / CSS / JS</h1>
+    <p>File choose karein, preview dekhein, aur public URL generate karne ke liye <strong>ImgBB</strong> API ka use karein.</p>
+
+    <div class="row">
+      <input id="fileInput" type="file" accept="image/*" />
+      <button id="makeBlobBtn" class="secondary">Local share (blob URL)</button>
+      <button id="uploadBtn">Upload to ImgBB</button>
+    </div>
+
+    <div class="preview" id="previewBox" style="display:none">
+      <img id="previewImg" alt="preview" />
+      <div class="meta">
+        <div id="fileName">—</div>
+        <div id="fileSize" class="smalltext"></div>
+        <div style="margin-top:8px"><button id="clearBtn" class="secondary">Clear</button></div>
+      </div>
+    </div>
+
+    <div class="output" id="output" style="display:none">
+      <div><strong>Public URL:</strong></div>
+      <div style="margin-top:6px"><input id="resultUrl" readonly /></div>
+      <div style="margin-top:8px">
+        <button id="copyBtn">Copy URL</button>
+        <a id="openLink" class="openlink" href="#" target="_blank">Open image in new tab</a>
+      </div>
+    </div>
+
+    <div class="note">
+      <div><strong>Note:</strong></div>
+      <ul>
+        <li>Blob URL temporary hoti hai, sirf aapke browser session tak.</li>
+        <li class="danger">ImgBB par upload hone ke baad image publicly accessible hoti hai.</li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
